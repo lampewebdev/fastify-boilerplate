@@ -14,7 +14,7 @@ export default async function (fastify, opts, next) {
 
   fastify.route({
     method: 'GET',
-    url: '/auth',
+    url: '/test-auth',
     preHandler: fastify.auth([fastify.verifyJWTandLevelDB]),
     handler: (req, reply) => {
       req.log.info('Auth route')
