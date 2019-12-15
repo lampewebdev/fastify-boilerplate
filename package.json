@@ -4,9 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon .src/index.js"
+    "dev": "nodemon --exec babel-node -r node_modules/dotenv/config src/index.js"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "fastify": "^2.11.0",
     "fastify-auth": "^0.7.2",
     "fastify-autoload": "^1.1.0",
@@ -16,6 +17,7 @@
   "devDependencies": {
     "@babel/cli": "^7.7.5",
     "@babel/core": "^7.7.5",
+    "@babel/node": "^7.7.4",
     "@babel/preset-env": "^7.7.6",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2",
