@@ -1,6 +1,7 @@
 import Fastify from 'fastify'
 import AutoLoad from 'fastify-autoload'
 import path from 'path'
+import setupAuth from './utils/setupAuth.js'
 
 export default async (opts) => {
   const fastify = Fastify(opts)
@@ -11,6 +12,8 @@ export default async (opts) => {
     .register(require('fastify-jwt'), { secret: 'supersecret' })
     .register(require('fastify-leveldb'), { name: 'db/authdb' })
     .register(require('fastify-auth'))
+
+  setupAuth(fastify)
 
   fastify.register(AutoLoad, {
     dir: path.join(__dirname, 'plugins'),
