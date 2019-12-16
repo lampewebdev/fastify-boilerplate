@@ -18,7 +18,7 @@ export default async function (fastify, opts, next) {
     preHandler: fastify.auth([fastify.verifyJWTandLevelDB]),
     handler: (req, reply) => {
       req.log.info('Auth route')
-      reply.send({ hello: 'world' })
+      reply.send({ test: 'auth' })
     }
   })
   next()

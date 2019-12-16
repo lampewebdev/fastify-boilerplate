@@ -23,6 +23,7 @@
     "@babel/node": "^7.7.4",
     "@babel/preset-env": "^7.7.6",
     "nodemon": "^2.0.2",
+    "pino-pretty": "^3.5.0",
     "snazzy": "^8.0.0",
     "standard": "^14.3.1",
     "tap": "^14.10.2"
